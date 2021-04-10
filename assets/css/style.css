@@ -156,7 +156,7 @@ ol li:hover {
 }
 
 /* Popup 'Add New Task' Title */
-#ui-id-4 {
+.ui-dialog-title {
     color: #fff;
     font-family: Poppins;
     font-weight: 400;
