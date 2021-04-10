@@ -41,3 +41,11 @@ ol li {
     padding: 5px;
     margin-bottom: 5px;
 }
+
+ol li:hover {
+    background: #3caea3;
+}
+
+#btnAddProject {
+    margin-left: 565px;
+}
