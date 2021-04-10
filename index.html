@@ -5,31 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="jquery-ui.css">
-    <script src="jquery.js"></script>
-    <script src="jquery-ui.js"></script>
+    <!--<link rel="stylesheet" href="jquery-ui.css">-->
+    <!--<script src="jquery.js"></script>-->
+    <!--<script src="jquery-ui.js"></script>-->
+
+    <!-- JavaScript -->
+    <script src="assets/js/todolist.js" type="text/javascript"></script>
+    <!-- CSS Styling -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css" />
+
+
 </head>
 
 <body>
-    <div id="container">
-        <h2> To Do List</h2>
-        <div id="projects">
-            <ul id="main">
-                <li><a href="#personal">Personal</a></li>
-                <li><a href="#work">Work</a></li>
-            </ul>
-            <ol id="personal">
-                <li><input type="checklist">doctor appointment</li>
-                <li><input type="checklist">call the plumber</li>
-            </ol>
-            <ol id="work">
-                <li><input type="checklist">complete test case document</li>
-                <li><input type="checklist">meet the project manager</li>
-                <li><input type="checklist">create user stories</li>
-            </ol>
+    <section id=todolist>
+        <div id="container">
+            <h2>My To-Do List</h2>
+            <div id="projects">
+                <ul id="main">
+                    <li><a href="#personal">Personal</a></li>
+                    <li><a href="#work">Work</a></li>
+                </ul>
+                <ol id="personal">
+                    <li><input type="checkbox">doctor appointment</li>
+                    <li><input type="checkbox">call the plumber</li>
+                </ol>
+                <ol id="work">
+                    <li><input type="checkbox">complete test case document</li>
+                    <li><input type="checkbox">meet the project manager</li>
+                    <li><input type="checkbox">create user stories</li>
+                </ol>
+            </div>
         </div>
-    </div>
-
+    </section>
 </body>
 
 </html>
