@@ -22,7 +22,7 @@
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
     text-transform: uppercase;
     color: #21639b;
     text-align: center;
@@ -50,6 +50,7 @@ ol li:hover {
     background: #eeeeee;
 }
 
+/* 'Add New Project' CTA Button */
 #btnAddProject {
     margin-left: 583px;
     margin-bottom: 20px;
@@ -65,4 +66,91 @@ ol li:hover {
 
 #btnAddProject:hover {
     background: #3caea3;
+}
+
+/* To Do List Projects Bar */
+.ui-widget-header {
+    background: #21639b;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border: none;
+    height: 43px;
+}
+
+/* 'Add New Project' Popup Content */
+.ui-widget {
+    font-family: Poppins;
+    font-size: 10px;
+}
+
+/* All CTA Buttons */
+.ui-button {
+    font-size: 10px;
+    color: #fff;
+    background: #21639b;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* All CTA Buttons Hover Effect */
+.ui-button:hover {
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    background: #3caea3;
+    color: #fff;
+}
+
+.ui-tabs-anchor {
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.ui-tabs-tab {
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+#project-dialog {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Popup 'Add New Project' Title */
+#ui-id-3 {
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* Popup Project Name Label */
+label {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+/* Popup Project Name Input */
+#new-project {
+    border-radius: 30px;
+    width: 250px;
+}
+
+/* Close Pop Symbol */
+.ui-dialog-titlebar-close {
+    display: none;
+}
+
+/* Popup Bottom Section */
+.ui-dialog-buttonpane {
+    border-top: 1px dotted #dddddd;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Popup Entire Section */
+.ui-dialog {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
 }
