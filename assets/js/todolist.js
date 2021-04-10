@@ -8,6 +8,27 @@ $(document).ready(function () {
         axis: "y",
         containment: "#projects"
     });
+    $("#btnAddTask").click(function () {
+        $("#task-dialog").dialog({
+            width: 400,
+            resizable: false,
+            modal: true,
+            buttons: {
+                "Add New Task": function () {
+                    $("#projects").tabs("refresh");
+                    var activeTab = $("#projects").tabs("option", "active");
+                    var title = $("#main > li:nth-child(" + (activeTab + 1) + ") > a").attr("href");
+                    $("#projects " + title).append("<li> <input type='checkbox'>" + $("#new-task").val() + "</li>");
+                    $("#new-task").val("");
+                    $(this).dialog("close");
+                },
+                "Cancel": function () {
+                    $("#new-task").val("");
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
     $("#btnAddProject").click(function () {
         $("#project-dialog").dialog({
             width: 400,

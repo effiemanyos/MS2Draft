@@ -14,7 +14,7 @@
 
 #container {
     width: 700px;
-    height: 450px;
+    height: 498px;
     margin: 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -52,19 +52,42 @@ ol li:hover {
 
 /* 'Add New Project' CTA Button */
 #btnAddProject {
-    margin-left: 583px;
+    margin-left: 575px;
     margin-bottom: 20px;
     background-color: #21639b;
     border: none;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     padding: 8px;
+    padding-left: 11px;
+    padding-right: 11px;
     font-family: Poppins;
     font-size: 10px;
     color: #fff;
 }
 
 #btnAddProject:hover {
+    background: #3caea3;
+}
+
+/* 'Add New Task' CTA Button */
+#btnAddTask {
+    margin-left: 586px;
+    margin-top: 20px;
+    background-color: #21639b;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding-bottom: 8px;
+    padding-top: 9px;
+    padding-left: 11px;
+    padding-right: 11px;
+    font-family: Poppins;
+    font-size: 10px;
+    color: #fff;
+}
+
+#btnAddTask:hover {
     background: #3caea3;
 }
 
@@ -112,13 +135,28 @@ ol li:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
+/* Project Name + Input Section */
 #project-dialog {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* Task Name + Input Section */
+#task-dialog {
     margin-top: 20px;
     margin-bottom: 30px;
 }
 
 /* Popup 'Add New Project' Title */
 #ui-id-3 {
+    color: #fff;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+/* Popup 'Add New Task' Title */
+#ui-id-4 {
     color: #fff;
     font-family: Poppins;
     font-weight: 400;
@@ -133,6 +171,12 @@ label {
 
 /* Popup Project Name Input */
 #new-project {
+    border-radius: 30px;
+    width: 250px;
+}
+
+/* Popup Task Name Input */
+#new-task {
     border-radius: 30px;
     width: 250px;
 }
