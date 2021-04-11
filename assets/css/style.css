@@ -208,7 +208,8 @@ label {
 }
 
 /* Tasks Edit and Remove Buttons */
-#tasks-icon {
+#tasks-edit,
+#tasks-delete {
     border-radius: 5px;
     margin-left: 5px;
     border: none;

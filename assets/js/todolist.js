@@ -12,6 +12,12 @@ $(document).ready(function () {
     // Deletes tasks once they are clicked on existing elements = CHANGE IT TO LINE-THROUGH EFFECT 
     // https://stackoverflow.com/questions/36459824/strike-through-on-specific-list-item-jquery
     // Event delegation (delegating responsibility)
+    $("#projects").on("click", "#tasks-delete", function () {
+        $(this).closest("li").slideUp(function () {
+            $(this).remove();
+        });
+    })
+    //DELETE THIS PART IS FOR TACHAR WHEN CHECKED
     $("#projects").on("click", "input[type=checkbox]", function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
