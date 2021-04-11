@@ -38,6 +38,10 @@ li {
     font-size: 15px;
 }
 
+ol {
+    margin-left: 15px;
+}
+
 ol li {
     border: 1px dotted #dddddd;
     border-radius: 10px;

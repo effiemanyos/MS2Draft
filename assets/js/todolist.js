@@ -8,6 +8,13 @@ $(document).ready(function () {
         axis: "y",
         containment: "#projects"
     });
+    // Deletes tasks once they are clicked (completed) = CHANGE IT TO LINE-THROUGH EFFECT 
+    // https://stackoverflow.com/questions/36459824/strike-through-on-specific-list-item-jquery
+    $("input[type=checkbox").click(function () {
+        $(this).closest("li").slideUp(function () {
+            $(this).remove();
+        });
+    })
     $("#btnAddTask").click(function () {
         $("#task-dialog").dialog({
             width: 400,
@@ -37,8 +44,10 @@ $(document).ready(function () {
             buttons: {
                 "Add New Project": function () {
                     var projectName = $("#new-project").val();
-                    $("<li><a href='#" + projectName + "'>" + projectName + "</a></li>").appendTo("#main");
-                    $("<ol id='" + projectName + "'></ol>").appendTo("#projects")
+                    // Allows having spaces in the project name + adding new tasks in those projects
+                    var replaceName = projectName.split(" ").join("_");
+                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a></li>").appendTo("#main");
+                    $("<ol id='" + replaceName + "'></ol>").appendTo("#projects").sortable();
                     $("#projects").tabs("refresh");
                     var tabCount = $("#projects .ui-tabs-nav li").length;
                     $("#projects").tabs("option", "active", tabCount - 1);
