@@ -229,3 +229,7 @@ label {
     margin-left: 8px;
     margin-right: 8px;
 }
+
+li .purchased {
+    text-decoration: line-through;
+}

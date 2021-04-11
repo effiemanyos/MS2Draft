@@ -16,13 +16,11 @@ $(document).ready(function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
         });
-    })
-    //DELETE THIS PART IS FOR TACHAR WHEN CHECKED
+    });
+    //Strick-through task when checked
     $("#projects").on("click", "input[type=checkbox]", function () {
-        $(this).closest("li").slideUp(function () {
-            $(this).remove();
-        });
-    })
+        $(this).closest("li").css('text-decoration', 'line-through');
+    });
     // Deletes project tabs and its respective tasks
     $("#projects").on("click", "span.ui-icon-close", function () {
         var index = $(this).closest("li").index();
