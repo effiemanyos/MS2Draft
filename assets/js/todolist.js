@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $("input[type=checkbox]").removeAttr("checked"); // Removes checks from checkboxes
     $("#projects").tabs();
     $("ul").sortable({
         axis: "x",
@@ -8,13 +9,22 @@ $(document).ready(function () {
         axis: "y",
         containment: "#projects"
     });
-    // Deletes tasks once they are clicked (completed) = CHANGE IT TO LINE-THROUGH EFFECT 
+    // Deletes tasks once they are clicked on existing elements = CHANGE IT TO LINE-THROUGH EFFECT 
     // https://stackoverflow.com/questions/36459824/strike-through-on-specific-list-item-jquery
-    $("input[type=checkbox").click(function () {
+    // Event delegation (delegating responsibility)
+    $("#projects").on("click", "input[type=checkbox]", function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
         });
     })
+    // Deletes project tabs and its respective tasks
+    $("#projects").on("click", "span.ui-icon-close", function () {
+        var index = $(this).closest("li").index();
+        var id = $("#main li:eq(" + index + ") a").attr("href");
+        $("#main li:eq(" + index + ")").remove();
+        $(id).remove();
+        $("#projects").tabs("refresh");
+    });
     $("#btnAddTask").click(function () {
         $("#task-dialog").dialog({
             width: 400,
@@ -25,7 +35,7 @@ $(document).ready(function () {
                     $("#projects").tabs("refresh");
                     var activeTab = $("#projects").tabs("option", "active");
                     var title = $("#main > li:nth-child(" + (activeTab + 1) + ") > a").attr("href");
-                    $("#projects " + title).append("<li> <input type='checkbox'>" + $("#new-task").val() + "</li>");
+                    $("#projects " + title).append("<li> <input type='checkbox'>" + $("#new-task").val() + "<span><button id='tasks-icon'><i class='fa fa-pencil'></i></button><button id='tasks-icon'><i class='fa fa-trash'></i></button></span></li>");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },
@@ -46,7 +56,7 @@ $(document).ready(function () {
                     var projectName = $("#new-project").val();
                     // Allows having spaces in the project name + adding new tasks in those projects
                     var replaceName = projectName.split(" ").join("_");
-                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a></li>").appendTo("#main");
+                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a><span class='ui-icon ui-icon-close'></span></li>").appendTo("#main");
                     $("<ol id='" + replaceName + "'></ol>").appendTo("#projects").sortable();
                     $("#projects").tabs("refresh");
                     var tabCount = $("#projects .ui-tabs-nav li").length;

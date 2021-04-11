@@ -127,12 +127,7 @@ ol li:hover {
     color: #fff;
 }
 
-.ui-tabs-anchor {
-    border-radius: 30px;
-    border: none;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-}
-
+/* Project Tabs */
 .ui-tabs-tab {
     border-radius: 30px;
     border: none;
@@ -201,4 +196,35 @@ label {
 .ui-dialog {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     border-radius: 10px;
+}
+
+/* Project Tabs Closing Symbol */
+.ui-icon-close {
+    transform: scale(1.2);
+    margin-right: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #21639b;
+}
+
+/* Tasks Edit and Remove Buttons */
+#tasks-icon {
+    border-radius: 5px;
+    margin-left: 5px;
+    border: none;
+    background: #21639b;
+    color: #fff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Tasks Edit and Remove Buttons Hover Effect*/
+#tasks-icon:hover {
+    background: #3caea3;
+    color: #fff;
+}
+
+/* Tasks Before and After Space */
+#task-text {
+    margin-left: 8px;
+    margin-right: 8px;
 }
