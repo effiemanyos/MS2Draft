@@ -52,6 +52,7 @@ ol li {
 
 ol li:hover {
     background: #eeeeee;
+    transform: scale(1.02);
 }
 
 /* 'Add New Project' CTA Button */
@@ -146,14 +147,6 @@ ol li:hover {
     margin-bottom: 30px;
 }
 
-/* Popup 'Add New Project' Title */
-#ui-id-3 {
-    color: #fff;
-    font-family: Poppins;
-    font-weight: 400;
-    font-size: 25px;
-}
-
 /* Popup 'Add New Task' Title */
 .ui-dialog-title {
     color: #fff;
@@ -208,8 +201,8 @@ label {
 }
 
 /* Tasks Edit and Remove Buttons */
-#tasks-edit,
-#tasks-delete {
+.tasks-edit,
+.tasks-delete {
     border-radius: 5px;
     margin-left: 5px;
     border: none;
@@ -219,17 +212,22 @@ label {
 }
 
 /* Tasks Edit and Remove Buttons Hover Effect*/
-#tasks-icon:hover {
+.tasks-delete:hover,
+.tasks-edit:hover {
     background: #3caea3;
     color: #fff;
 }
 
 /* Tasks Before and After Space */
-#task-text {
+.task-text {
     margin-left: 8px;
     margin-right: 8px;
 }
 
 li .purchased {
+    text-decoration: line-through;
+}
+
+.checked {
     text-decoration: line-through;
 }

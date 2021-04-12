@@ -12,21 +12,15 @@ $(document).ready(function () {
     // Deletes tasks once they are clicked on existing elements = CHANGE IT TO LINE-THROUGH EFFECT 
     // https://stackoverflow.com/questions/36459824/strike-through-on-specific-list-item-jquery
     // Event delegation (delegating responsibility)
-    $("#projects").on("click", "#tasks-delete", function () {
+    $("#projects").on("click", ".tasks-delete", function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
         });
     });
-    // Strick-through task when checked
-    $("#projects").on("click", "input[type=checkbox]", function () {
-        $(this).closest("li").css('text-decoration', 'line-through');
+    // Strick-through tasks when checked and undo it when unchecked
+    $(".checkbox").on("click", function () {
+        $(this).next().toggleClass("checked");
     });
-
-    // TESTING
-    $("#projects").on("click", "input[type=checkbox]", function () {
-        $(this).closest("li").css('text-decoration', 'line-through');
-    });
-
     // Deletes project tabs and its respective tasks
     $("#projects").on("click", "span.ui-icon-close", function () {
         var index = $(this).closest("li").index();
@@ -45,7 +39,7 @@ $(document).ready(function () {
                     $("#projects").tabs("refresh");
                     var activeTab = $("#projects").tabs("option", "active");
                     var title = $("#main > li:nth-child(" + (activeTab + 1) + ") > a").attr("href");
-                    $("#projects " + title).append("<li> <input type='checkbox'>" + $("#new-task").val() + "<span><button id='tasks-icon'><i class='fa fa-pencil'></i></button><button id='tasks-icon'><i class='fa fa-trash'></i></button></span></li>");
+                    $("#projects " + title).append("<li> <input class='checkbox' type='checkbox'>" + $("#new-task").val() + "<span><button class='tasks-edit'><i class='fa fa-pencil'></i></button><button class='tasks-delete'><i class='fa fa-trash'></i></button></span></li>");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },
