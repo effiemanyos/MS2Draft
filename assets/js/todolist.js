@@ -9,16 +9,15 @@ $(document).ready(function () {
         axis: "y",
         containment: "#projects"
     });
-    // Deletes tasks once they are clicked on existing elements = CHANGE IT TO LINE-THROUGH EFFECT 
-    // https://stackoverflow.com/questions/36459824/strike-through-on-specific-list-item-jquery
+    // Deletes tasks once they are clicked on dinamically added elements
     // Event delegation (delegating responsibility)
     $("#projects").on("click", ".tasks-delete", function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
         });
     });
-    // Strick-through tasks when checked and undo it when unchecked
-    $(".checkbox").on("click", function () {
+    // Event delegatiion - for new tasks implementation
+    $("#projects").on("click", "input[type=checkbox]", function () {
         $(this).next().toggleClass("checked");
     });
     // Deletes project tabs and its respective tasks
@@ -29,6 +28,7 @@ $(document).ready(function () {
         $(id).remove();
         $("#projects").tabs("refresh");
     });
+    // Add tasks button
     $("#btnAddTask").click(function () {
         $("#task-dialog").dialog({
             width: 400,
@@ -39,7 +39,7 @@ $(document).ready(function () {
                     $("#projects").tabs("refresh");
                     var activeTab = $("#projects").tabs("option", "active");
                     var title = $("#main > li:nth-child(" + (activeTab + 1) + ") > a").attr("href");
-                    $("#projects " + title).append("<li> <input class='checkbox' type='checkbox'>" + $("#new-task").val() + "<span><button class='tasks-edit'><i class='fa fa-pencil'></i></button><button class='tasks-delete'><i class='fa fa-trash'></i></button></span></li>");
+                    $("#projects " + title).append("<li> <input class='checkbox' type='checkbox'>" + "<span class='task-text'>" + $("#new-task").val() + "</span>" + "<span><button class='tasks-edit'><i class='fa fa-pencil'></i></button><button class='tasks-delete'><i class='fa fa-trash'></i></button></span></li>");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },
@@ -50,6 +50,7 @@ $(document).ready(function () {
             }
         });
     });
+    // Add project button
     $("#btnAddProject").click(function () {
         $("#project-dialog").dialog({
             width: 400,

@@ -224,10 +224,6 @@ label {
     margin-right: 8px;
 }
 
-li .purchased {
-    text-decoration: line-through;
-}
-
 .checked {
     text-decoration: line-through;
 }
