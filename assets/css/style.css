@@ -2,6 +2,8 @@
 
 * {
     font-family: Poppins;
+    margin: 0;
+    padding: 0;
 }
 
 #todolist {
@@ -14,11 +16,12 @@
 
 #container {
     width: 700px;
-    height: 498px;
+    height: 650px;
     margin: 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     background-color: #fff;
+    padding-top: 40px;
 }
 
 h2 {
@@ -30,7 +33,7 @@ h2 {
 
 #projects {
     width: 650px;
-    height: 250px;
+    height: 450px;
     margin: 0px auto;
 }
 
@@ -69,6 +72,7 @@ ol li:hover {
     font-family: Poppins;
     font-size: 10px;
     color: #fff;
+    padding-bottom: 7px;
 }
 
 #btnAddProject:hover {
@@ -165,12 +169,14 @@ label {
 #new-project {
     border-radius: 30px;
     width: 250px;
+    height: 15px;
 }
 
 /* Popup Task Name Input */
 #new-task {
     border-radius: 30px;
     width: 250px;
+    height: 15px;
 }
 
 /* Close Pop Symbol */
@@ -209,6 +215,10 @@ label {
     background: #21639b;
     color: #fff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding-top: 3px;
+    padding-left: 6px;
+    padding-bottom: 3px;
+    padding-right: 6px;
 }
 
 /* Tasks Edit and Remove Buttons Hover Effect*/

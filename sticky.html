@@ -20,6 +20,9 @@
         type="text/css" />
     <!-- Google Fonts API -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        type="text/css" />
 </head>
 
 <body>
@@ -27,11 +30,11 @@
         <div class="container1">
             <button class="btn btn-success" onclick="typeNote">Create New Sticky</button>
         </div>
-        <div class="container2">
-
-        </div>
+        <div class="container2"></div>
         <div class="container3">
-
+            <textarea id="note-text" placeholder="Write Note..." maxlength="95"></textarea>
+            <i class="fa fa-check-circle" aria-hidden="true"></i>
+            <i class="fa fa-times-circle" aria-hidden="true"></i>
         </div>
     </div>
 </body>
