@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Website Title -->
-    <title>To Do List</title>
+    <title>Sticky Notes</title>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- JQuery UI -->
@@ -26,17 +26,19 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <div class="container1">
-            <button class="btn btn-success" onclick="typeNote">Create New Sticky</button>
+    <section id="sticky-section">
+        <div class="main-container">
+            <div class="container1">
+                <button class="btn-style" onclick="typeNote">Create New Sticky</button>
+            </div>
+            <div class="container2"></div>
+            <div class="container3">
+                <textarea id="note-text" placeholder="Write Note..." maxlength="95"></textarea>
+                <i id="check-icon" class="fa fa-check-circle" aria-hidden="true"></i>
+                <i id="x-icon" class="fa fa-times-circle" aria-hidden="true"></i>
+            </div>
         </div>
-        <div class="container2"></div>
-        <div class="container3">
-            <textarea id="note-text" placeholder="Write Note..." maxlength="95"></textarea>
-            <i class="fa fa-check-circle" aria-hidden="true"></i>
-            <i class="fa fa-times-circle" aria-hidden="true"></i>
-        </div>
-    </div>
+    </section>
 </body>
 
 </html>

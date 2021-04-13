@@ -237,3 +237,77 @@ label {
 .checked {
     text-decoration: line-through;
 }
+
+/*---------------- STICKY SECTION ----------------*/
+#sticky-section {
+    background: linear-gradient(to right, #21639b, #3caea3);
+    font-family: Poppins;
+    font-size: 20px;
+    height: 1000px;
+    /* Fix this */
+}
+
+.main-container {
+    width: 95%;
+    margin: auto;
+}
+
+.container1 {
+    margin-left: 2%;
+}
+
+.btn-style {
+    border-radius: 30px;
+    border: none;
+    background: #fff;
+    color: #21639b;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    margin-top: 40px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+
+}
+
+.container2 {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 5%;
+}
+
+.container3 {
+    /*display: none;*/
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+
+textarea {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    width: 275px;
+    height: 275px;
+    padding: 30px;
+}
+
+#check-icon,
+#x-icon {
+    color: #21639b;
+}
+
+#check-icon {
+    position: absolute;
+    right: 13%;
+    top: 5%;
+}
+
+#x-icon {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+}
