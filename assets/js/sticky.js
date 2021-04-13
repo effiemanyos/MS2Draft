@@ -22,6 +22,7 @@ function typeNote() {
     }
 }
 
+// Create a new sticky note
 function createNote() {
     var noteText = document.getElementById("note-text").value;
     var node0 = document.createElement("div");
@@ -48,8 +49,10 @@ function createNote() {
     });
 
     node0.addEventListener("dblclick", function () {
-
+        node0.remove();
     });
+
+    document.getElementById("note-text").value = '';
 }
 
 function margin() {
