@@ -5,22 +5,43 @@ var checkIcon = document.getElementById("check-icon");
 var xIcon = document.getElementById("x-icon");
 var i = 0;
 
-// Adding event listeners to our icons
+// Adding event listeners to my icons
 xIcon.addEventListener("click", function () {
     typeNote();
-})
+});
 checkIcon.addEventListener("click", function () {
     createNote();
-})
+});
 
-// Let's create those two functions
-
+// Let's create these two functions
 function typeNote() {
-
+    if (container3.style.display == "none") {
+        container3.style.display = "block";
+    } else {
+        container3.style.display = "none";
+    }
 }
 
 function createNote() {
+    var noteText = document.getElementById("note-text").value;
+    var node0 = document.createElement("div");
+    var node1 = document.createElement("h1");
 
+    node1.innerHTML = noteText;
+
+    node1.setAttribute("style", "width:250px; height:250px; font-size:25px; padding:25px; margin-top:10px; overflow:hidden; box-shadow:0px 10px 24px 0px rgba(0,0,0,0.75)");
+
+    node1.style.margin = margin();
+    node1.style.transform = rotate();
+    node1.style.background = color();
+
+    node0.appendChild(node1);
+
+    container2.insertAdjacentElement("beforeend", node0);
+
+    node0.addEventListener("mouseenter", function () {
+        node0.style.transform = "scale(1)"
+    });
 }
 
 function margin() {
