@@ -5,7 +5,7 @@ var checkIcon = document.getElementById("check-icon");
 var xIcon = document.getElementById("x-icon");
 var i = 0;
 
-// Adding event listeners to my icons
+// Adding event listeners to my icons √
 xIcon.addEventListener("click", function () {
     typeNote();
 });
@@ -13,7 +13,7 @@ checkIcon.addEventListener("click", function () {
     createNote();
 });
 
-// Let's create these two functions
+// Make the notes visible for users to write in them
 function typeNote() {
     if (container3.style.display == "none") {
         container3.style.display = "block";
@@ -30,7 +30,7 @@ function createNote() {
 
     node1.innerHTML = noteText;
 
-    node1.setAttribute("style", "width:250px; height:250px; font-size:25px; padding:25px; margin-top:10px; overflow:hidden; box-shadow:0px 10px 24px 0px rgba(0,0,0,0.75)");
+    node1.setAttribute("style", "width:250px; height:250px; font-size:25px; padding:25px; margin-top:10px; overflow:hidden; border-radius: 10px; box-shadow:0px 10px 24px 0px rgba(0,0,0,0.75)");
 
     node1.style.margin = margin();
     node1.style.transform = rotate();
