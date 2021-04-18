@@ -387,6 +387,10 @@ th {
     align-items: center;
 }
 
+.btn-styling:hover {
+    background: #3caea3;
+}
+
 .icon-styling {
     color: #21639b;
 }
@@ -405,4 +409,12 @@ th {
 #isbn,
 #price {
     border-radius: 30px;
+}
+
+.trash-styling {
+    color: #21639b;
+}
+
+.trash-styling:hover {
+    color: #3caea3;
 }
