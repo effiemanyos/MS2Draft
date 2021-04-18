@@ -67,19 +67,16 @@ ol li:hover {
 
 /* 'Add New Project' CTA Button */
 #btnAddProject {
-    margin-left: 562px;
+    margin-left: 555px;
     margin-bottom: 20px;
     background-color: #21639b;
     border: none;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    padding: 8px;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding: 9px 11px 8px 11px;
     font-family: Poppins;
     font-size: 10px;
     color: #fff;
-    padding-bottom: 7px;
 }
 
 #btnAddProject:hover {
@@ -88,7 +85,7 @@ ol li:hover {
 
 /* 'Add New Task' CTA Button */
 #btnAddTask {
-    margin-left: 584px;
+    margin-left: 575px;
     margin-top: 20px;
     background-color: #21639b;
     border: none;
@@ -144,6 +141,10 @@ ol li:hover {
     border-radius: 30px;
     border: none;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.content-styling {
+    width: 90% !important;
 }
 
 /* Project Name + Input Section */
@@ -395,5 +396,13 @@ th {
 }
 
 .table {
-    width: 70% !important;
+    width: 93% !important;
+    margin: auto;
+}
+
+#title,
+#author,
+#isbn,
+#price {
+    border-radius: 30px;
 }

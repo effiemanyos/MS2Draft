@@ -49,7 +49,7 @@ class UI {
         setTimeout(() => document.querySelector('.alert').remove(), 3000);
     }
 
-    static clearFields() { // This is not working
+    static clearFields() { // THIS IS NOT WORKING ANYMORE
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
         document.querySelector('#isbn').value = '';
@@ -87,10 +87,10 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
         Store.addBook(book);
 
         // Success message
-        UI.showAlert('The book has been added', 'success');
+        UI.showAlert('The book has been added', 'success'); // THIS IS NOT WORKING ANYMORE
 
         // Clear fields
-        UI.clearFields();
+        UI.clearFields(); // THIS IS NOT WORKING ANYMORE
     }
 });
 
