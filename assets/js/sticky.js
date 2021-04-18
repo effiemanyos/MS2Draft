@@ -20,7 +20,7 @@ function typeNote() {
     } else {
         container3.style.display = "none";
     }
-}
+};
 
 // Create a new sticky note
 function createNote() {

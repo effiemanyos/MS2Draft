@@ -31,7 +31,7 @@ h2 {
     text-align: center;
 }
 
-#projects {
+#categories {
     width: 650px;
     height: 450px;
     margin: 0px auto;
@@ -58,9 +58,9 @@ ol li:hover {
     transform: scale(1.02);
 }
 
-/* 'Add New Project' CTA Button */
-#btnAddProject {
-    margin-left: 575px;
+/* 'Add New Category' CTA Button */
+#btnAddCategory {
+    margin-left: 562px;
     margin-bottom: 20px;
     background-color: #21639b;
     border: none;
@@ -75,7 +75,7 @@ ol li:hover {
     padding-bottom: 7px;
 }
 
-#btnAddProject:hover {
+#btnAddCategory:hover {
     background: #3caea3;
 }
 
@@ -100,7 +100,7 @@ ol li:hover {
     background: #3caea3;
 }
 
-/* To Do List Projects Bar */
+/* To Do List Category Bar */
 .ui-widget-header {
     background: #21639b;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -108,7 +108,7 @@ ol li:hover {
     height: 43px;
 }
 
-/* 'Add New Project' Popup Content */
+/* 'Add New Category' Popup Content */
 .ui-widget {
     font-family: Poppins;
     font-size: 10px;
@@ -132,15 +132,15 @@ ol li:hover {
     color: #fff;
 }
 
-/* Project Tabs */
+/* Category Tabs */
 .ui-tabs-tab {
     border-radius: 30px;
     border: none;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Project Name + Input Section */
-#project-dialog {
+/* Category Name + Input Section */
+#category-dialog {
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -159,14 +159,14 @@ ol li:hover {
     font-size: 25px;
 }
 
-/* Popup Project Name Label */
+/* Popup Category Name Label */
 label {
     margin-right: 10px;
     font-size: 15px;
 }
 
-/* Popup Project Name Input */
-#new-project {
+/* Popup Category Name Input */
+#new-category {
     border-radius: 30px;
     width: 250px;
     height: 15px;
@@ -197,7 +197,7 @@ label {
     border-radius: 10px;
 }
 
-/* Project Tabs Closing Symbol */
+/* Category Tabs Closing Symbol */
 .ui-icon-close {
     transform: scale(1.2);
     margin-right: 15px;
@@ -209,28 +209,46 @@ label {
 /* Tasks Edit and Remove Buttons */
 .tasks-edit,
 .tasks-delete {
-    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: none;
+    margin-right: 7px;
+    color: #21639b;
+    float: right;
+    /*border-radius: 5px;
     margin-left: 5px;
     border: none;
     background: #21639b;
     color: #fff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    padding-top: 3px;
-    padding-left: 6px;
-    padding-bottom: 3px;
-    padding-right: 6px;
+    padding: 3px 6px 3px 6px;*/
 }
 
 /* Tasks Edit and Remove Buttons Hover Effect*/
 .tasks-delete:hover,
 .tasks-edit:hover {
-    background: #3caea3;
-    color: #fff;
+    color: #3caea3;
+    /*background: #3caea3;
+    color: #fff;*/
+}
+
+.book-icon {
+    color: #21639b;
+}
+
+.book-icon:hover {
+    color: #3caea3;
 }
 
 /* Tasks Before and After Space */
 .task-text {
-    margin-left: 8px;
+    margin-left: 4px;
+    margin-right: 20px;
+}
+
+/* Book Icon Before and After Space */
+.book-icon {
+    margin-left: 5px;
     margin-right: 8px;
 }
 

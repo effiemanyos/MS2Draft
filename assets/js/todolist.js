@@ -1,32 +1,32 @@
 $(document).ready(function () {
     $("input[type=checkbox]").removeAttr("checked"); // Removes checks from checkboxes
-    $("#projects").tabs();
+    $("#categories").tabs();
     $("ul").sortable({
         axis: "x",
-        containment: "#projects"
+        containment: "#categories"
     });
     $("ol").sortable({
         axis: "y",
-        containment: "#projects"
+        containment: "#categories"
     });
     // Deletes tasks once they are clicked on dinamically added elements
     // Event delegation (delegating responsibility)
-    $("#projects").on("click", ".tasks-delete", function () {
+    $("#categories").on("click", ".tasks-delete", function () {
         $(this).closest("li").slideUp(function () {
             $(this).remove();
         });
     });
     // Event delegatiion - for new tasks implementation
-    $("#projects").on("click", "input[type=checkbox]", function () {
+    $("#categories").on("click", "input[type=checkbox]", function () {
         $(this).next().toggleClass("checked");
     });
-    // Deletes project tabs and its respective tasks
-    $("#projects").on("click", "span.ui-icon-close", function () {
+    // Deletes category tabs and its respective tasks
+    $("#categories").on("click", "span.ui-icon-close", function () {
         var index = $(this).closest("li").index();
         var id = $("#main li:eq(" + index + ") a").attr("href");
         $("#main li:eq(" + index + ")").remove();
         $(id).remove();
-        $("#projects").tabs("refresh");
+        $("#categories").tabs("refresh");
     });
     // Add tasks button
     $("#btnAddTask").click(function () {
@@ -36,10 +36,10 @@ $(document).ready(function () {
             modal: true,
             buttons: {
                 "Add New Task": function () {
-                    $("#projects").tabs("refresh");
-                    var activeTab = $("#projects").tabs("option", "active");
+                    $("#categories").tabs("refresh");
+                    var activeTab = $("#categories").tabs("option", "active");
                     var title = $("#main > li:nth-child(" + (activeTab + 1) + ") > a").attr("href");
-                    $("#projects " + title).append("<li> <input class='checkbox' type='checkbox'>" + "<span class='task-text'>" + $("#new-task").val() + "</span>" + "<span><button class='tasks-edit'><i class='fa fa-pencil'></i></button><button class='tasks-delete'><i class='fa fa-trash'></i></button></span></li>");
+                    $("#categories" + title).append("<li> <input class='checkbox' type='checkbox'>" + "<span class='task-text'><i class='book-icon fa fa-book'></i>" + $("#new-task").val() + "</span>" + "<span><button class='tasks-delete'><i class='fa fa-trash'></i></button><button class='tasks-edit'><i class='fa fa-pencil'></i></button></span></li>");
                     $("#new-task").val("");
                     $(this).dialog("close");
                 },
@@ -50,27 +50,27 @@ $(document).ready(function () {
             }
         });
     });
-    // Add project button
-    $("#btnAddProject").click(function () {
-        $("#project-dialog").dialog({
+    // Add category button
+    $("#btnAddCategory").click(function () {
+        $("#category-dialog").dialog({
             width: 400,
             resizable: false,
             modal: true,
             buttons: {
-                "Add New Project": function () {
-                    var projectName = $("#new-project").val();
-                    // Allows having spaces in the project name + adding new tasks in those projects
-                    var replaceName = projectName.split(" ").join("_");
-                    $("<li><a href='#" + replaceName + "'>" + projectName + "</a><span class='ui-icon ui-icon-close'></span></li>").appendTo("#main");
-                    $("<ol id='" + replaceName + "'></ol>").appendTo("#projects").sortable();
-                    $("#projects").tabs("refresh");
-                    var tabCount = $("#projects .ui-tabs-nav li").length;
-                    $("#projects").tabs("option", "active", tabCount - 1);
-                    $("#new-project").val("");
+                "Add New Category": function () {
+                    var categoryName = $("#new-category").val();
+                    // Allows having spaces in the category name + adding new tasks in those categories
+                    var replaceName = categoryName.split(" ").join("_");
+                    $("<li><a href='#" + replaceName + "'>" + categoryName + "</a><span class='ui-icon ui-icon-close'></span></li>").appendTo("#main");
+                    $("<ol id='" + replaceName + "'></ol>").appendTo("#categories").sortable();
+                    $("#categories").tabs("refresh");
+                    var tabCount = $("#categories .ui-tabs-nav li").length;
+                    $("#categories").tabs("option", "active", tabCount - 1);
+                    $("#new-category").val("");
                     $(this).dialog("close");
                 },
                 "Cancel": function () {
-                    $("#new-project").val("");
+                    $("#new-category").val("");
                     $(this).dialog("close");
                 }
             }

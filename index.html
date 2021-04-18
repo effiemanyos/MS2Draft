@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Website Title -->
-    <title>To Do List</title>
+    <title>To Read List</title>
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- JQuery UI -->
@@ -23,39 +23,45 @@
 <body>
     <section id=todolist>
         <div id="container">
-            <h2>To Do List</h2>
-            <button id="btnAddProject">Add New Project</button>
-            <div id="projects">
+            <h2>To Read List <i class="fa fa-book"></i></h2>
+            <button id="btnAddCategory">Add New Category</button>
+            <div id="categories">
                 <ul id="main">
-                    <li><a href="#personal">Personal</a><span class="ui-icon ui-icon-close"></span></li>
-                    <li><a href="#work">Work</a><span class="ui-icon ui-icon-close"></span></li>
+                    <li><a href="#product">Product</a><span class="ui-icon ui-icon-close"></span></li>
+                    <li><a href="#design">UX Design</a><span class="ui-icon ui-icon-close"></span></li>
                 </ul>
-                <ol id="personal">
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some groceries for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some groceries for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some groceries for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
+                <ol id="product">
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>The Product Book — Carlos González</span><span><button
+                                class="tasks-delete"><i class="fa fa-trash"></i></button><button class="tasks-edit"><i
+                                    class="fa fa-pencil"></i></button></span></li>
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>Hooked — Nir Eyal</span><span><button
+                                class="tasks-delete"><i class="fa fa-trash"></i></button><button class="tasks-edit"><i
+                                    class="fa fa-pencil"></i></button></span></li>
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>Inspired — Marty Cagan</span><span><button
+                                class="tasks-delete"><i class="fa fa-trash"></i></button><button class="tasks-edit"><i
+                                    class="fa fa-pencil"></i></button></span></li>
                 </ol>
-                <ol id="work">
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some snacks for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some snacks for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
-                    <li><input class="checkbox" type="checkbox"><span class="task-text">Buy some snacks for the
-                            week</span><span><button class="tasks-edit"><i class="fa fa-pencil"></i></button><button
-                                class="tasks-delete"><i class="fa fa-trash"></i></button></span></li>
+                <ol id="design">
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>The Design of Everyday Things — Don
+                            Norman</span><span><button class="tasks-delete"><i class="fa fa-trash"></i></button><button
+                                class="tasks-edit"><i class="fa fa-pencil"></i></button></span></li>
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>Don't Make Me Think — Steve Krug</span><span><button
+                                class="tasks-delete"><i class="fa fa-trash"></i></button><button class="tasks-edit"><i
+                                    class="fa fa-pencil"></i></button></span></li>
+                    <li><input class="checkbox" type="checkbox"><span class="task-text"><i
+                                class="book-icon fa fa-book"></i>Sprint — Jake Knapp</span><span><button
+                                class="tasks-delete"><i class="fa fa-trash"></i></button><button class="tasks-edit"><i
+                                    class="fa fa-pencil"></i></button></span></li>
                 </ol>
             </div>
-            <button id="btnAddTask">Add New Task</button>
-            <div id="project-dialog" title="Add New Project" style="display: none;">
-                <label for="new-project">Project Name:</label><input id="new-project" type="text" />
+            <button id="btnAddTask">Add New Book</button>
+            <div id="category-dialog" title="Add New Category" style="display: none;">
+                <label for="new-category">Category Name:</label><input id="new-category" type="text" />
             </div>
             <div id="task-dialog" title="Add New Task" style="display: none;">
                 <label for="new-task">Task Name:</label><input id="new-task" type="text" />
