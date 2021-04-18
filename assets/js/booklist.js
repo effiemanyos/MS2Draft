@@ -1,8 +1,9 @@
 // Book Class: Represents a Book
 class Book {
-    constructor(title, author, price) {
+    constructor(title, author, isbn, price) {
         this.title = title;
         this.author = author;
+        this.isbn = isbn;
         this.price = price;
     }
 }
@@ -10,19 +11,7 @@ class Book {
 // UI Class: Handle UI Tasks
 class UI {
     static displayBooks() {
-        const StoredBooks = [{ // Pretend this is coming from local storage
-                title: 'Book One',
-                author: 'John Doe',
-                price: '€20'
-            },
-            {
-                title: 'Book Two',
-                author: 'Jane Doe',
-                price: '€30'
-            }
-        ];
-
-        const books = StoredBooks;
+        const books = Store.getBooks();
 
         books.forEach((book) => UI.addBookToList(book));
     }
@@ -35,6 +24,7 @@ class UI {
         row.innerHTML = `
             <td>${book.title}</td>
             <td>${book.author}</td>
+            <td>${book.isbn}</td>
             <td>${book.price}</td>
             <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
         `;
@@ -59,9 +49,10 @@ class UI {
         setTimeout(() => document.querySelector('.alert').remove(), 3000);
     }
 
-    static clearFields() {
+    static clearFields() { // This is not working
         document.querySelector('#title').value = '';
         document.querySelector('#author').value = '';
+        document.querySelector('#isbn').value = '';
         document.querySelector('#price').value = '';
     }
 }
@@ -79,17 +70,24 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
     // Get form values
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
+    const isbn = document.querySelector('#isbn').value;
     const price = document.querySelector('#price').value;
 
     // Validate input has a text
-    if (title === '' || author === '' || price === '') {
+    if (title === '' || author === '' || isbn === '' || price === '') {
         UI.showAlert('Please fill in all fields', 'danger');
     } else {
         // Instatiate book
-        const book = new Book(title, author, price);
+        const book = new Book(title, author, isbn, price);
 
         // Add book to UI
         UI.addBookToList(book);
+
+        // Add book to store
+        Store.addBook(book);
+
+        // Success message
+        UI.showAlert('The book has been added', 'success');
 
         // Clear fields
         UI.clearFields();
@@ -98,5 +96,8 @@ document.querySelector('#book-form').addEventListener('submit', (e) => {
 
 // Event: Remove a Book
 document.querySelector('#book-list').addEventListener('click', (e) => {
-    UI.deleteBook(e.target)
+    UI.deleteBook(e.target);
+
+    // Success message
+    UI.showAlert('The book has been removed', 'warning');
 });
