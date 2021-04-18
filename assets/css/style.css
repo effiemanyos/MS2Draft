@@ -16,7 +16,7 @@
 
 #container {
     width: 700px;
-    height: 650px;
+    height: 685px;
     margin: 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -25,10 +25,17 @@
 }
 
 h2 {
-    font-size: 35px;
-    text-transform: uppercase;
+    font-family: Poppins;
     color: #21639b;
     text-align: center;
+    font-size: 3.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.middle-class {
+    color: #3caea3;
 }
 
 #projects {
