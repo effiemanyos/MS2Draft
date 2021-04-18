@@ -31,7 +31,7 @@ h2 {
     text-align: center;
 }
 
-#categories {
+#projects {
     width: 650px;
     height: 450px;
     margin: 0px auto;
@@ -58,8 +58,8 @@ ol li:hover {
     transform: scale(1.02);
 }
 
-/* 'Add New Category' CTA Button */
-#btnAddCategory {
+/* 'Add New Project' CTA Button */
+#btnAddProject {
     margin-left: 562px;
     margin-bottom: 20px;
     background-color: #21639b;
@@ -75,22 +75,19 @@ ol li:hover {
     padding-bottom: 7px;
 }
 
-#btnAddCategory:hover {
+#btnAddProject:hover {
     background: #3caea3;
 }
 
 /* 'Add New Task' CTA Button */
 #btnAddTask {
-    margin-left: 586px;
+    margin-left: 584px;
     margin-top: 20px;
     background-color: #21639b;
     border: none;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-    padding-bottom: 8px;
-    padding-top: 9px;
-    padding-left: 11px;
-    padding-right: 11px;
+    padding: 9px 11px 8px 11px;
     font-family: Poppins;
     font-size: 10px;
     color: #fff;
@@ -100,7 +97,7 @@ ol li:hover {
     background: #3caea3;
 }
 
-/* To Do List Category Bar */
+/* To Do List Projects Bar */
 .ui-widget-header {
     background: #21639b;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
@@ -108,7 +105,7 @@ ol li:hover {
     height: 43px;
 }
 
-/* 'Add New Category' Popup Content */
+/* 'Add New Project' Popup Content */
 .ui-widget {
     font-family: Poppins;
     font-size: 10px;
@@ -122,6 +119,9 @@ ol li:hover {
     border: none;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 /* All CTA Buttons Hover Effect */
@@ -132,15 +132,15 @@ ol li:hover {
     color: #fff;
 }
 
-/* Category Tabs */
+/* Project Tabs */
 .ui-tabs-tab {
     border-radius: 30px;
     border: none;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-/* Category Name + Input Section */
-#category-dialog {
+/* Project Name + Input Section */
+#project-dialog {
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -159,16 +159,16 @@ ol li:hover {
     font-size: 25px;
 }
 
-/* Popup Category Name Label */
+/* Popup Project Name Label */
 label {
     margin-right: 10px;
     font-size: 15px;
 }
 
-/* Popup Category Name Input */
-#new-category {
+/* Popup Project Name Input */
+#new-project {
     border-radius: 30px;
-    width: 250px;
+    width: 215px;
     height: 15px;
 }
 
@@ -197,7 +197,7 @@ label {
     border-radius: 10px;
 }
 
-/* Category Tabs Closing Symbol */
+/* Project Tabs Closing Symbol */
 .ui-icon-close {
     transform: scale(1.2);
     margin-right: 15px;
