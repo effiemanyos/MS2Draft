@@ -547,3 +547,49 @@ th {
     border-left: 2px solid #f5f6fa;
     border-right: 2px solid #f5f6fa;
 }
+
+/*---------------- LIBRARY USING GOOGLE API ----------------*/
+
+#book-library {
+    background: linear-gradient(to right, #21639b, #3caea3);
+    padding: 30px 40px 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+#book-title {
+    font-size: 50px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+#search-box {
+    border-radius: 30px;
+    margin-right: 3px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+#search-button {
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    background: #21639b;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+#search-button:hover {
+    background: #3caea3;
+}
+
+.results-styling {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.book-list {
+    margin-top: 50px;
+    visibility: hidden;
+}
