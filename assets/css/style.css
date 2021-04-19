@@ -421,194 +421,129 @@ th {
 
 /*---------------- RECOMMENDED BOOKS ----------------*/
 
-.books-section {
-
+#books-section {
     width: 100vw;
-
     height: 100vh;
-
     display: flex;
-
-    /*align-items: center;*/
-
+    align-items: center;
     justify-content: center;
-
-    background: #f1f1f1;
-
+    background: linear-gradient(to right, #21639b, #3caea3);
+    overflow: hidden;
 }
 
 .card {
-
     display: grid;
-
     grid-template-columns: 280px;
-
     grid-template-rows: 210px 210px 80px;
-
     grid-template-areas: "image""text""stats";
 
-    /*border-top-right-radius: 30px;
+    /**border-top-right-radius: 30px;
+    border-top-left-radius: 30px;**/
 
-border-top-left-radius: 30px;*/
-
+    font-family: Poppins;
     border-radius: 20px;
-
     background: #fff;
-
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-
     margin-top: 180px;
-
+    margin-right: 80px;
     margin-bottom: 180px;
-
-    margin-right: 20px;
-
 }
 
 .card-image {
-
     grid-area: image;
-
-    background: url(../images/inspired-img.png);
-
+    background: url(../images/book-inspired.jpg);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     border-top-left-radius: 15px;
-
     border-top-right-radius: 15px;
-
     background-size: cover;
-
 }
 
 .card-text {
-
     grid-area: text;
-
     margin: 25px;
-
+    padding-top: 8px;
 }
 
 .card-text .author {
-
     color: #434343;
-
     font-size: 16px;
-
 }
 
 .card-text h3 {
-
-    color: #82589F;
-
+    color: #21639b;
     text-transform: uppercase;
-
     font-size: 30px;
-
     letter-spacing: 2px;
-
-    margin-top: 2px;
-
+    margin-top: 1px;
+    margin-bottom: 5px;
 }
 
 .card-text p {
-
-    color: #434343;
-
-    font-family: Roboto, Helvetica, sans-serif;
-
+    font-family: Poppins;
     font-size: 16px;
+}
 
+.subtitle {
+    margin-bottom: 5px;
+}
+
+.category {
+    color: #21639b;
+    font-weight: 600;
 }
 
 .card-stats {
-
     grid-area: stats;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr 1fr;
-
     grid-template-rows: 1fr;
-
     border-bottom-left-radius: 15px;
-
     border-bottom-right-radius: 15px;
-
-    background: #82589F;
-
-    font-family: Roboto, Helvetica, sans-serif;
-
+    background: #21639b;
+    font-family: Poppins;
     font-size: 16px;
-
     text-align: center;
-
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-
 }
 
 .card-stats .stat1,
 .stat2,
 .stat3 {
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     flex-direction: column;
-
     padding: 10px;
-
     color: #f5f6fa;
-
 }
 
 .card-stats .value {
-
     font-size: 20px;
-
 }
 
 .card-stats a {
-
     text-decoration: none;
-
     color: #f5f6fa;
-
 }
 
 .card-stats .stat1:hover {
-
-    background: #000;
-
-    color: #f5f6fa;
-
+    background: #3caea3;
+    color: #fff;
     border-bottom-left-radius: 15px;
-
 }
 
 .card-stats .stat2:hover {
-
-    background: #000;
-
-    color: #f5f6fa;
-
+    background: #3caea3;
+    color: #fff;
 }
 
 .card-stats .stat3:hover {
-
-    background: #000;
-
-    color: #f5f6fa;
-
+    background: #3caea3;
+    color: #fff;
     border-bottom-right-radius: 15px;
-
 }
 
 .stat2 {
-
     border-left: 2px solid #f5f6fa;
-
     border-right: 2px solid #f5f6fa;
-
 }
