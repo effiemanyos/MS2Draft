@@ -20,12 +20,31 @@ $(document).ready(function () {
                 success: function (res) {
                     console.log(res)
                     if (response.totalItem === 0) {
-                        alert("There are no results... Please try again!")
+                        alert("There are no results... Please try again!");
                     } else {
-                        $("book-title").anitem
+                        $("#book-title").animate({
+                            'margin-top': '5px'
+                        }, 1000); // Search box animation
+                        $(".book-list").css('visibility', 'visible');
+                        displayResults(response);
                     }
+                },
+                error: function () {
+                    alert("Something went wrong... <br>" + "Try again!");
                 }
-            })
+            });
         }
-    })
+        $("#search-box").val(""); // Clearn search box
+    });
+
+    /*
+    Function to display results in index.html
+    #param res
+    */
+
+    function displayResults(res) {
+        /*for (var i = 0; i < res.) {
+
+        }*/
+    }
 })
