@@ -43,8 +43,6 @@ $(document).ready(function () {
     */
 
     function displayResults(res) {
-        /*for (var i = 0; i < res.) {
-
-        }*/
+        for (var i = 0; i < res.items.length; i += 2) {}
     }
 })
