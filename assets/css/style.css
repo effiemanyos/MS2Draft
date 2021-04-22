@@ -14,17 +14,18 @@
     align-items: center;
 }
 
-#container {
-    width: 700px;
+#containerNO {
+    /** original name: #container **/
+    /**width: 700px;
     height: 685px;
     margin: 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     background-color: #fff;
-    padding-top: 40px;
+    padding-top: 40px;**/
 }
 
-h2 {
+/**h2 {
     font-family: Poppins;
     color: #21639b;
     text-align: center;
@@ -32,7 +33,7 @@ h2 {
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 25px;
-}
+}**/
 
 .middle-class {
     color: #3caea3;
@@ -431,22 +432,23 @@ th {
     overflow: hidden;
 }
 
-.card {
-    display: grid;
+.cardNO {
+    /** original: .card **/
+    /**display: grid;
     grid-template-columns: 280px;
     grid-template-rows: 210px 210px 80px;
-    grid-template-areas: "image""text""stats";
+    grid-template-areas: "image""text""stats";**/
 
     /**border-top-right-radius: 30px;
     border-top-left-radius: 30px;**/
 
-    font-family: Poppins;
+    /**font-family: Poppins;
     border-radius: 20px;
     background: #fff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     margin-top: 180px;
     margin-right: 80px;
-    margin-bottom: 180px;
+    margin-bottom: 180px;**/
 }
 
 .card-image {
@@ -548,48 +550,87 @@ th {
     border-right: 2px solid #f5f6fa;
 }
 
-/*---------------- LIBRARY USING GOOGLE API ----------------*/
+/*---------------- RESPONSIBILITIES ----------------*/
 
-#book-library {
-    background: linear-gradient(to right, #21639b, #3caea3);
-    padding: 30px 40px 600px;
-    justify-content: center;
+#responsibilities {
+    width: auto;
+    height: auto;
+    /** Fix these two **/
+    box-sizing: border-box;
     align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #4B76E5, #3CBED0);
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
-#book-title {
+.text {
+    text-align: center;
+    line-height: 1.5;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.section-title {
+    color: #fff;
     font-size: 50px;
-    color: #fff;
-    margin-bottom: 30px;
 }
 
-#search-box {
-    border-radius: 30px;
-    margin-right: 3px;
-    border: none;
-    outline: none;
+.card h3 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem;
+    grid-gap: 30px;
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.5;
+    background-color: #fff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-#search-button {
-    border-radius: 30px;
-    border: none;
-    outline: none;
-    background: #21639b;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+.card p {
+    margin-top: 10px;
+    font-size: 16px;
 }
 
-#search-button:hover {
-    background: #3caea3;
+.card:hover {
+    transform: translateY(-10px);
+    transition: all 300ms;
 }
 
-.results-styling {
-    font-size: 30px;
-    color: #fff;
-    font-weight: 300;
+.icon-color {
+    color: #4B76E5;
 }
 
-.book-list {
-    margin-top: 50px;
-    visibility: hidden;
+@media(max-width:1400px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        padding: 3rem;
+    }
+}
+
+@media(max-width:900px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 2rem;
+    }
 }
