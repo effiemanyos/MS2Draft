@@ -559,7 +559,8 @@ th {
     box-sizing: border-box;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #4B76E5, #3CBED0);
+    background: #faf9fa;
+    /**background: linear-gradient(to right, #4B76E5, #3CBED0);**/
     padding-top: 30px;
     padding-bottom: 30px;
 }
@@ -570,11 +571,11 @@ th {
     width: 90%;
     margin: auto;
     margin-top: 30px;
-    color: #fff;
+    color: #434343;
 }
 
 .section-title {
-    color: #fff;
+    color: #4B76E5;
     font-size: 50px;
 }
 
@@ -598,7 +599,7 @@ th {
     padding: 2rem;
     line-height: 1.5;
     background-color: #fff;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 15px !important;
 }
 
 .card p {
@@ -611,7 +612,7 @@ th {
     transition: all 300ms;
 }
 
-.icon-color {
+.icon-style {
     color: #4B76E5;
 }
 
