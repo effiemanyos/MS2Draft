@@ -585,7 +585,7 @@ th {
     margin-top: 20px;
 }
 
-.container {
+.cont-styling {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 4rem;
@@ -595,12 +595,13 @@ th {
 }
 
 .card {
-    border: 1px solid #fff;
+    /**border: 1px solid #fff;**/
     text-align: center;
     padding: 2rem;
     line-height: 1.5;
     background-color: #fff;
     border-radius: 15px !important;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
 .card p {
@@ -618,7 +619,7 @@ th {
 }
 
 @media(max-width:1400px) {
-    .container {
+    .cont-styling {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -628,7 +629,7 @@ th {
 }
 
 @media(max-width:900px) {
-    .container {
+    .cont-styling {
         grid-template-columns: 1fr;
     }
 
@@ -641,6 +642,7 @@ th {
 
 #key-experts {
     padding-top: 30px;
+    padding-bottom: 60px;
     background: linear-gradient(to right, #4B76E5, #3CBED0);
     box-sizing: none;
 }
@@ -654,45 +656,90 @@ th {
     color: #fff;
 }
 
+.text-2 p {
+    margin-bottom: 40px;
+}
+
 .section-title-2 {
     color: #fff;
     font-size: 50px;
     margin-bottom: 15px;
 }
 
+/** Container **/
 .industry-experts {
     padding: 20px 15px 30px;
-    background: #fff;
-    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
     text-align: center;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    margin-top: 40px;
 }
 
 .industry-experts .pic {
     display: inline-block;
-    width: 100%;
-    height: 100%;
-    background: #fff;
+    /**width: 100%;
+    height: 100%;**/
+    background-color: rgba(255, 255, 255, 0.05);
     padding: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     transition: all 0.5s ease 0s;
 }
 
 .industry-experts:hover .pic {
-    background: #3CBED0;
+    background: linear-gradient(to right, #4B76E5, #3CBED0);
     border-radius: 50%;
 }
 
 .pic img {
     width: 100%;
-    height: auto;
+    height: 50%;
     border-radius: 50%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-.name-title {
+.expert-name {
     display: block;
     font-size: 20px;
     font-weight: 600;
     color: #4B76E5;
     margin: 0 0 7px 0;
-    text-transform: uppercase;
 }
+
+.expert-role {
+    display: block;
+    font-size: 15px;
+    color: #434343;
+    margin-bottom: 15px;
+}
+
+.social-media {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.social-media li {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.social-media li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    font-size: 15px;
+    color: #4B76E5;
+    border: 1px solid #4B76E5;
+    transition: all 0.5s ease 0s;
+    text-decoration: none;
+}
+
+.industry-experts:hover .social-media li a {
+    background: #4B76E5;
+    color: #fff;
+}
+
+@media only screen {}
