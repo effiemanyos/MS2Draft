@@ -577,6 +577,7 @@ th {
 .section-title {
     color: #4B76E5;
     font-size: 50px;
+    margin-bottom: 15px;
 }
 
 .card h3 {
