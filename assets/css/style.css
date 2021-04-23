@@ -642,7 +642,7 @@ th {
 
 #key-experts {
     padding-top: 30px;
-    padding-bottom: 90px;
+    padding-bottom: 50px;
     background: linear-gradient(to right, #4B76E5, #3CBED0);
     box-sizing: none;
 }
@@ -742,8 +742,12 @@ th {
     color: #fff;
 }
 
-@media only screen and (max-width: 900px) {
+#page-nav {
+    margin-top: 100px;
+}
+
+/**@media only screen and (max-width: 900px) {
     .industry-experts {
         margin-top: 30px;
     }
-}
+}**/
