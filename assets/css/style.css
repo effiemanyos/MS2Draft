@@ -636,3 +636,63 @@ th {
         padding: 2rem;
     }
 }
+
+/*---------------- INDUSTRY EXPERTS ----------------*/
+
+#key-experts {
+    padding-top: 30px;
+    background: linear-gradient(to right, #4B76E5, #3CBED0);
+    box-sizing: none;
+}
+
+.text-2 {
+    text-align: center;
+    line-height: 1.5;
+    width: 90%;
+    margin: auto;
+    margin-top: 30px;
+    color: #fff;
+}
+
+.section-title-2 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.industry-experts {
+    padding: 20px 15px 30px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.industry-experts .pic {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 25px;
+    transition: all 0.5s ease 0s;
+}
+
+.industry-experts:hover .pic {
+    background: #3CBED0;
+    border-radius: 50%;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.name-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4B76E5;
+    margin: 0 0 7px 0;
+    text-transform: uppercase;
+}
