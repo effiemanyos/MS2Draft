@@ -761,12 +761,13 @@ textarea {
 #the-resources {
     font-family: Poppins;
     padding-top: 70px;
-    padding-bottom: 150px;
-    background: linear-gradient(to right, #21639b, #3caea3);
+    padding-bottom: 200px;
+    background: linear-gradient(to right, #4B76E5, #3CBED0);
 }
 
+/** Table **/
 .table-wrapper {
-    width: 850px;
+    width: 80%;
     background: #fff;
     padding: 20px 30px 5px;
     margin: 30px auto;
@@ -849,23 +850,35 @@ table.table td .cool-name:hover {
 }
 
 /** 'Watch' label **/
-.label-watch,
-.btn-watch {
+.label-watch {
     padding: 4px 12px;
-    background: #c53649;
+    background: #DB3545;
     color: #fff;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
 
-.label-read,
-.btn-read {
+.label-read {
     padding: 4px 12px;
-    background: #3aa4ab;
+    background: #15A2B8;
     color: #fff;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.label-listen {
+    padding: 4px 12px;
+    background: #28A745;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.tiny-logo {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
 /** -------------- TESTING DROPDOWN MENU ------------------- **/
@@ -892,7 +905,7 @@ table.table td .cool-name:hover {
     display: none;
     position: absolute;
     background-color: #000;
-    min-width: 100px;
+    min-width: 135px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 5px;
@@ -907,7 +920,7 @@ table.table td .cool-name:hover {
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #fff;
     text-decoration: none;
     color: #000;
 }
