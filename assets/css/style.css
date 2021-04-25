@@ -169,10 +169,11 @@ ol li:hover {
 }
 
 /* Popup Project Name Label */
-label {
+/**label {
     margin-right: 10px;
     font-size: 15px;
-}
+}**/
+/** Re-activate with another class to avoid repeating 'label' **/
 
 /* Popup Project Name Input */
 #new-project {
@@ -400,10 +401,11 @@ th {
     margin: 30px;
 }
 
-.table {
+/**.table {
     width: 93% !important;
     margin: auto;
-}
+}**/
+/** Use another class name instead of table, not general names for styling **/
 
 #title,
 #author,
