@@ -826,7 +826,7 @@ table.table tr th:last-child {
 }
 
 table.table-striped tbody tr:nth-last-of-type(odd) {
-    background-color: #fcfcfc;
+    background-color: #eeeeee;
 }
 
 table.table-striped.table-hover tbody tr:hover {
@@ -849,7 +849,8 @@ table.table td .cool-name:hover {
 }
 
 /** 'Watch' label **/
-.label-watch {
+.label-watch,
+.btn-watch {
     padding: 4px 12px;
     background: #c53649;
     color: #fff;
@@ -857,7 +858,9 @@ table.table td .cool-name:hover {
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-.label-read {
+
+.label-read,
+.btn-read {
     padding: 4px 12px;
     background: #3aa4ab;
     color: #fff;
