@@ -14,18 +14,17 @@
     align-items: center;
 }
 
-#containerNO {
-    /** original name: #container **/
-    /**width: 700px;
+#todo-container {
+    width: 700px;
     height: 685px;
     margin: 70px;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     background-color: #fff;
-    padding-top: 40px;**/
+    padding-top: 40px;
 }
 
-/**h2 {
+.todo-title {
     font-family: Poppins;
     color: #21639b;
     text-align: center;
@@ -33,7 +32,7 @@
     font-weight: 300;
     line-height: 1.2;
     margin-bottom: 25px;
-}**/
+}
 
 .middle-class {
     color: #3caea3;
@@ -169,11 +168,10 @@ ol li:hover {
 }
 
 /* Popup Project Name Label */
-/**label {
+.replace-this-name {
     margin-right: 10px;
     font-size: 15px;
-}**/
-/** Re-activate with another class to avoid repeating 'label' **/
+}
 
 /* Popup Project Name Input */
 #new-project {
@@ -854,8 +852,7 @@ table.table td .cool-name:hover {
     padding: 4px 12px;
     background: #DB3545;
     color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
 
@@ -863,16 +860,14 @@ table.table td .cool-name:hover {
     padding: 4px 12px;
     background: #15A2B8;
     color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
 .label-listen {
     padding: 4px 12px;
     background: #28A745;
     color: #fff;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
 }
 
 .tiny-logo {

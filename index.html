@@ -22,8 +22,9 @@
 
 <body>
     <section id=todolist>
-        <div id="container">
-            <h2><i class="fa fa-book middle-class"></i> To<span class="middle-class">Read</span>List</h2>
+        <div id="todo-container">
+            <h2 class="todo-title"><i class="fa fa-book middle-class"></i> To<span class="middle-class">Read</span>List
+            </h2>
             <button id="btnAddProject">Add New Category</button>
             <div id="projects" class="content-styling">
                 <ul id="main">
@@ -61,10 +62,11 @@
             </div>
             <button id="btnAddTask">Add New Book</button>
             <div id="project-dialog" title="Add New Category" style="display: none;">
-                <label for="new-project">Category Name:</label><input id="new-project" type="text" />
+                <label class="replace-this-name" for="new-project">Category Name:</label><input id="new-project"
+                    type="text" />
             </div>
             <div id="task-dialog" title="Add New Book" style="display: none;">
-                <label for="new-task">Book Name:</label><input id="new-task" type="text" />
+                <label class="replace-this-name" for="new-task">Book Name:</label><input id="new-task" type="text" />
             </div>
         </div>
     </section>
