@@ -433,23 +433,21 @@ textarea {
     overflow: hidden;
 }
 
-.cardNO {
-    /** original: .card **/
-    /**display: grid;
+.card-style {
+    display: grid;
     grid-template-columns: 280px;
     grid-template-rows: 210px 210px 80px;
-    grid-template-areas: "image""text""stats";**/
+    grid-template-areas: "image""text""stats";
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
 
-    /**border-top-right-radius: 30px;
-    border-top-left-radius: 30px;**/
-
-    /**font-family: Poppins;
+    font-family: Poppins;
     border-radius: 20px;
     background: #fff;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     margin-top: 180px;
     margin-right: 80px;
-    margin-bottom: 180px;**/
+    margin-bottom: 180px;
 }
 
 .card-image {
@@ -595,7 +593,7 @@ textarea {
     margin: auto;
 }
 
-.card {
+.card-styling-2 {
     /**border: 1px solid #fff;**/
     text-align: center;
     padding: 2rem;
