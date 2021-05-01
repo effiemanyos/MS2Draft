@@ -853,18 +853,20 @@ table.table td .cool-name:hover {
 
 /** Book Information - Title **/
 .text-1 h3 {
-    font-size: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #4B76E5;
 }
 
 /** Book Information - Subtitle **/
 .text-1 .b-title {
-    font-size: 19px;
+    font-size: 18px;
     color: #777777;
 }
 
 /** Book Information - Author **/
 .text-1 .b-author {
-    font-size: 16px;
+    font-size: 15px;
     color: #777777;
 }
 
@@ -877,7 +879,7 @@ table.table td .cool-name:hover {
     border-bottom-right-radius: 30px;
     background: #F6F6F6;
     text-align: center;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    /**box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);**/
 }
 
 /** Book Additional Information **/
@@ -888,7 +890,7 @@ table.table td .cool-name:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;**/
-    padding: 10px;
+    padding: 15px;
 }
 
 /** Numbers **/
@@ -940,8 +942,8 @@ table.table td .cool-name:hover {
 
 /** White Lines **/
 .stat2 {
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border-left: 3px solid #fff;
+    border-right: 3px solid #fff;
 }
 
 @media (max-width: 1150px) {
