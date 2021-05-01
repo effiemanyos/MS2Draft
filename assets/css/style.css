@@ -617,7 +617,7 @@ textarea {
     color: #4B76E5;
 }
 
-@media(max-width:1400px) {
+/**@media(max-width:1400px) {
     .cont-styling {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -635,7 +635,9 @@ textarea {
     .card {
         padding: 2rem;
     }
-}
+}**/
+
+/** Fix this cause there are other cards **/
 
 /*---------------- INDUSTRY EXPERTS ----------------*/
 
@@ -928,4 +930,98 @@ table.table td .cool-name:hover {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: #3CBED0;
+}
+
+/*---------------- BOOKS 2 ----------------*/
+
+#b-rec {
+    background: linear-gradient(to right, #4B76E5, #3CBED0);
+    /** Fix this part **/
+    padding-top: 70px;
+    padding-bottom: 200px;
+}
+
+.grid {
+    margin: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid>article {
+    background: #fff;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    text-align: left;
+    width: 250px;
+    transition: transform .3s;
+}
+
+.grid>article:hover {
+    transform: translateY(-10px);
+    transition: all 300ms;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+.grid>article img {
+    width: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.text-1 {
+    padding: 20px 20px 20px;
+    font-family: Poppins;
+}
+
+.text-1 h3 {
+    font-size: 25px;
+}
+
+.text-1 .b-title {
+    font-size: 18px;
+    color: #777777;
+}
+
+.text-1 .b-author {
+    font-size: 15px;
+    color: #777777;
+}
+
+.text-1 button {
+    /** Change all this to the OLD one **/
+    background: #4B76E5;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 850px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 580px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid>article {
+        text-align: left;
+    }
 }
