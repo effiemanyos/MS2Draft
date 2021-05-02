@@ -810,7 +810,7 @@ table.table td .cool-name:hover {
     background: linear-gradient(to right, #4B76E5, #3CBED0);
     /** Fix this part **/
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
 }
 
 /** Grid Styling **/
