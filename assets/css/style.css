@@ -810,7 +810,7 @@ table.table td .cool-name:hover {
     background: linear-gradient(to right, #4B76E5, #3CBED0);
     /** Fix this part **/
     padding-top: 30px;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 /** Grid Styling **/
@@ -861,9 +861,18 @@ table.table td .cool-name:hover {
     color: #4B76E5;
 }
 
+.text-1 .b-sm-title {
+    font-size: 18.7px;
+}
+
 /** Book Information - Subtitle **/
 .text-1 .b-title {
     font-size: 15px;
+    color: #434343;
+}
+
+.text-1 .b-smm-title {
+    font-size: 12.8px;
     color: #434343;
 }
 
