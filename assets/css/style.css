@@ -8,7 +8,7 @@
 
 #todolist {
     background: linear-gradient(to right, #21639b, #3caea3);
-    padding: 190px 40px 100px;
+    padding: 50px 40px 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -509,7 +509,7 @@ textarea {
     }
 }**/
 
-/** Fix this cause there are other cards **/
+/** Fix this cause there are other cards in the document, replace with classes **/
 
 /*---------------- INDUSTRY EXPERTS ----------------*/
 
