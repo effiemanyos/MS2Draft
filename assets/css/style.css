@@ -813,6 +813,7 @@ table.table td .cool-name:hover {
     padding-bottom: 200px;
 }
 
+/** Grid Styling **/
 .grid {
     margin: 80px;
     display: grid;
@@ -822,16 +823,19 @@ table.table td .cool-name:hover {
     align-items: center;
 }
 
+/** Card Container **/
 .grid>article {
-    background: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border: none;
     border-radius: 30px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
     text-align: left;
-    width: 260px;
+    width: 255px;
     transition: transform .3s;
+    padding: 20px;
 }
 
+/** Card Container Hover Effect **/
 .grid>article:hover {
     transform: translateY(-10px);
     transition: all 300ms;
@@ -840,14 +844,13 @@ table.table td .cool-name:hover {
 /** Book Image **/
 .grid>article img {
     width: 100%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.02), 0 6px 20px 0 rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
-/** Book Information **/
+/** Book Main Information **/
 .text-1 {
-    padding: 30px 20px 20px;
+    padding: 30px 10px 25px;
     font-family: Poppins;
 }
 
@@ -860,14 +863,19 @@ table.table td .cool-name:hover {
 
 /** Book Information - Subtitle **/
 .text-1 .b-title {
-    font-size: 18px;
-    color: #777777;
+    font-size: 15px;
+    color: #434343;
 }
 
 /** Book Information - Author **/
-.text-1 .b-author {
+.b-author {
     font-size: 15px;
-    color: #777777;
+    color: #434343;
+    text-decoration: none !important;
+}
+
+.b-author:hover {
+    color: #4B76E5;
 }
 
 /** Book Additional Information **/
@@ -875,11 +883,11 @@ table.table td .cool-name:hover {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background: #F6F6F6;
+    border-radius: 10px;
+    /**background: linear-gradient(#4B76E5, #3CBED0);**/
+    background: #4B76E5;
     text-align: center;
-    /**box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);**/
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
 }
 
 /** Book Additional Information **/
@@ -890,12 +898,12 @@ table.table td .cool-name:hover {
     align-items: center;
     justify-content: center;
     flex-direction: column;**/
-    padding: 15px;
+    padding: 5px;
 }
 
 /** Numbers **/
 .card-stats .value {
-    font-size: 15px;
+    font-size: 12px;
 }
 
 /** Tags **/
@@ -903,62 +911,55 @@ table.table td .cool-name:hover {
     font-size: 12px;
 }
 
-/** Additional Info Link Styling **/
-.card-stats a {
+/** Hover Effect Additional Info Text **/
+.linking {
+    color: #fff;
     text-decoration: none !important;
-    color: #777777;
 }
 
-.card-stats .stat1 {
-    border-bottom-left-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-}
-
-.card-stats .stat2 {
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
-}
-
-.card-stats .stat3 {
-    border-bottom-right-radius: 30px;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+/** Hover Effect Additional Info Text **/
+.linking:hover {
+    color: #fff;
 }
 
 /** Hover Effect Rating **/
 .stat1:hover {
-    background: #fff;
-    border-bottom-left-radius: 30px;
+    background: #3CBED0;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 /** Hover Effect Publication Year **/
 .stat2:hover {
-    background: #fff;
+    background: #3CBED0;
 }
 
 /** Hover Effect Reviews **/
 .stat3:hover {
-    background: #fff;
-    border-bottom-right-radius: 30px;
+    background: #3CBED0;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /** White Lines **/
 .stat2 {
-    border-left: 3px solid #fff;
-    border-right: 3px solid #fff;
+    border-left: 3px solid rgba(255, 255, 255, 0.9);
+    border-right: 3px solid rgba(255, 255, 255, 0.9);
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1200px) {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 620px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
