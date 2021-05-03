@@ -1063,3 +1063,473 @@ table.table td .cool-name:hover {
         grid-template-columns: repeat(1, 1fr);
     }
 }
+
+/* ------------------------------------[ How Can I Help Section ]-------------------------------------- */
+
+/* Section Styling */
+#services-types {
+    box-sizing: border-box;
+    line-height: 1.5;
+    background-color: #e7e8ef;
+    color: #434343;
+}
+
+/* Section Padding */
+.section-padding {
+    padding: 40px 20px 40px 20px;
+}
+
+/* Space Between Intro & Services Types */
+.services-types-intro {
+    margin-bottom: 40px;
+}
+
+/* Section Title */
+.services-types-intro h2 {
+    font-family: Neucha, Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+/* Purple Hyphen Symbol */
+.hyphen-purple {
+    background: #82589F;
+    width: 100px;
+    height: 5px;
+    border: none;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+
+/* Intro Paragraph */
+.services-types-intro p {
+    margin-top: 30px;
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.services-types-box {
+    gap: 25px;
+}
+
+/* Space Between Services Types */
+.services-types-box:not(:first-child) {
+    margin-top: 50px;
+}
+
+/* Section Subtitles */
+.services-types-content h3 {
+    font-family: Neucha, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Section Paragraphs */
+.services-types-content p {
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0px;
+}
+
+/* Section Icons */
+.services-types-icon {
+    height: 50px;
+    width: 50px;
+    background-color: #82589F;
+    color: #f5f6fa;
+    font-size: 22px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* Section Image Alignment */
+.services-types-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Section Image Styling */
+.services-type-img img {
+    max-width: 100%;
+    margin: 30px 0;
+}
+
+/* Section CTA Button Alignment */
+.cta-button-purple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* Section CTA Button Styling */
+.cta-button-purple a {
+    text-decoration: none;
+    font-family: Poppins, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    background: #82589F;
+    color: #f5f6fa;
+    padding: 12px 25px 10px 25px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+/* Section CTA Button Hover Effect */
+.cta-button-purple a:hover {
+    background: #000;
+    color: #f5f6fa;
+}
+
+/* ----------------------------------------SKILLS SECTION */
+
+.skills-section {
+    box-sizing: border-box;
+    display: grid;
+    height: 100%;
+    place-items: center;
+    background: #f1f1f1;
+}
+
+.col-6 {
+    display: inline-block;
+}
+
+.skills-section h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #443344;
+    margin-top: 50px;
+}
+
+.skills-bar {
+    width: 530px;
+    background: #fff;
+    border-radius: 30px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    margin-top: 30px;
+    margin-bottom: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.skills-bar .bar {
+    margin: 20px 0;
+}
+
+.skills-bar .bar:first-child {
+    margin-top: 0px;
+}
+
+.skills-bar .bar .info {
+    margin-bottom: 5px;
+}
+
+.skills-bar .bar .info span {
+    font-family: Poppins, Helvetica, sans-serif;
+    font-size: 15px;
+    opacity: 0;
+    animation: showText1 0.5s 1s linear forwards;
+}
+
+/* Symbol 1 */
+.skills-bar .bar .info span::before {
+    content: "❄";
+    margin-right: 10px;
+}
+
+@keyframes showText1 {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Bars */
+.skills-bar .bar .progress-line {
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background: #e7e8ef;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transform-origin: left;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.05),
+        0px 1px rgba(255, 255, 255, 0.08);
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+    height: 100%;
+    width: 80%;
+    background: #82589F;
+    position: absolute;
+    border-radius: 30px;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-line.skill-1 span {
+    width: 95%;
+}
+
+.progress-line.skill-2 span {
+    width: 90%;
+}
+
+.progress-line.skill-3 span {
+    width: 80%;
+}
+
+.progress-line.skill-4 span {
+    width: 90%;
+}
+
+.progress-line.skill-5 span {
+    width: 90%;
+}
+
+.progress-line.skill-6 span {
+    width: 90%;
+}
+
+.progress-line.skill-7 span {
+    width: 90%;
+}
+
+.progress-line.skill-8 span {
+    width: 90%;
+}
+
+.progress-line.skill-9 span {
+    width: 90%;
+}
+
+.progress-line.skill-10 span {
+    width: 90%;
+}
+
+.progress-line.skill-11 span {
+    width: 90%;
+}
+
+.progress-line.skill-12 span {
+    width: 90%;
+}
+
+.progress-line.skill-13 span {
+    width: 90%;
+}
+
+.progress-line.skill-14 span {
+    width: 90%;
+}
+
+.progress-line.skill-15 span {
+    width: 90%;
+}
+
+.progress-line.skill-16 span {
+    width: 90%;
+}
+
+.bar .progress-line span::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: -10px;
+    height: 0;
+    width: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+    border-top-color: #000;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+/* Indicators */
+.bar .progress-line span::after {
+    position: absolute;
+    right: 0;
+    top: -27px;
+    color: #f5f6fa;
+    font-family: Neucha, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 13px;
+    background: #000;
+    padding: 1px 8px;
+    border-radius: 3px;
+    opacity: 0;
+    animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+    100% {
+        opacity: 1;
+    }
+}
+
+.progress-line.skill-1 span::after {
+    content: "95%";
+}
+
+.progress-line.skill-2 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-3 span::after {
+    content: "80%";
+}
+
+.progress-line.skill-4 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-5 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-6 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-7 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-8 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-9 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-10 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-11 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-12 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-13 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-14 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-15 span::after {
+    content: "90%";
+}
+
+.progress-line.skill-16 span::after {
+    content: "90%";
+}
+
+/* --------------------------------------------- SERVICES BY FIELDS SECTION √ */
+
+/* SECTION STYLING*/
+.specific-services {
+    background: #e7e8ef;
+    padding-bottom: 50px;
+}
+
+/* LAYOUT SPACING */
+.services-item {
+    padding: 0 8px;
+}
+
+.content-spacing .row {
+    margin-top: -20px;
+}
+
+/* INTRO TITLE */
+.section-title .section-main-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+/* INTRO SUBTITLE */
+.section-title .section-subtitle {
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+/* SECTION ICONS */
+.services-item i {
+    color: #82589F;
+    font-size: 50px;
+    line-height: 45px;
+    float: left;
+}
+
+/* ICONS SPACING */
+.services-single-item {
+    margin-left: 70px;
+}
+
+/* SECTION PARAGRAPHS */
+.services-single-item p {
+    font-size: 16px;
+    font-family: Poppins, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+/* SECTION SUBTITLE */
+.services-heading {
+    /**text-transform: uppercase;**/
+    font-size: 25px;
+    letter-spacing: 2px;
+    position: relative;
+    font-weight: 600;
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+}
+
+/* HYPHEN SYMBOL PURPLE */
+.services-heading::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    background: #82589F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+/* SPACING BETWEEN SERVICES */
+.gaps {
+    margin-top: 30px;
+}
