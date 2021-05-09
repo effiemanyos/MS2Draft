@@ -1735,3 +1735,96 @@ form {
     overflow: hidden;
     display: block;
 }
+
+/* ------------------------------------[ CAREER PATH RECOVER ]-------------------------------------- */
+
+/* ------------------------------------[ CAREER PATH SECTION √ ]-------------------------------------- */
+
+/** Section Styling **/
+#career-section {
+    background: #fff;
+    padding: 80px 40px 30px;
+}
+
+/** Section List Spacing **/
+.path-timeline {
+    margin: 50px auto;
+}
+
+/** Section First Icons (Batery) **/
+.path-timeline .main-icon {
+    font-size: 60px;
+    color: #4B76E5;
+    margin-bottom: 10px;
+}
+
+/** Role Titles **/
+.path-timeline p {
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 12px;
+    color: #4B76E5;
+}
+
+/** List Position **/
+.path-list-styling {
+    text-align: center;
+}
+
+/** List Items **/
+.path-list-styling li {
+    display: inline-block;
+    width: 180px;
+    position: relative;
+}
+
+/** Section Second Icons (Circle) **/
+.path-list-styling li .path-circle {
+    height: 20px;
+    width: 20px;
+    background-color: #000;
+    color: #000;
+    font-size: 12px;
+    border-radius: 50%;
+    padding-top: 4px;
+}
+
+/** Section Line **/
+.path-list-styling li .path-circle::after {
+    content: '';
+    background: #000;
+    height: 4px;
+    width: 190px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 81px;
+}
+
+/** Highlighting Last Role in Hierarchy **/
+.path-list-styling li:nth-child(6) .special-icon {
+    color: #000;
+}
+
+.path-list-styling li:nth-child(6) .path-circle {
+    background: #000;
+    color: #000;
+}
+
+.path-list-styling li:nth-child(6) .path-circle::after {
+    background: #000;
+}
+
+.path-list-styling li:nth-child(6) .special-txt {
+    color: #000;
+}
+
+/** Reduce Line Width (First & Last Roles) **/
+.path-list-styling li:first-child .path-circle::after {
+    width: 90px;
+    left: 98px;
+}
+
+.path-list-styling li:last-child .path-circle::after {
+    width: 90px;
+}
