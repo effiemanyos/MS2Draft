@@ -1828,3 +1828,230 @@ form {
 .path-list-styling li:last-child .path-circle::after {
     width: 90px;
 }
+
+/* ------------------------------------[ NETWORKINGLIST APP SECTION √ ]-------------------------------------- */
+
+/** Section Styling **/
+#networking-section {
+    background: var(--bg);
+    padding: 100px 40px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/** Container Styling **/
+.main-container {
+    width: 100%;
+    height: 1350px;
+    margin: 70px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    padding: 70px;
+    background: var(--bg-panel);
+}
+
+/** Intro Title Styling **/
+.networking-intro-styling {
+    margin-bottom: 60px;
+}
+
+/** Input Form & Display Results Styling **/
+.record-input,
+.record-display {
+    border-radius: 30px;
+    padding: 50px 0;
+    margin: 30px auto;
+    width: 90%;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/** Section Titles **/
+.record-input>h2,
+.record-display>h2 {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-headings);
+}
+
+/** Input Form Styling **/
+.record-input {
+    color: var(--color-text);
+    background: var(--bg);
+}
+
+/** Input Form Content Styling **/
+.entry-form {
+    padding: 10px 0;
+}
+
+/** Main Form Styling **/
+.form-styling {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/** Main Form Labels Styling **/
+.form-styling label {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/** Main Form Label & Input **/
+.form-styling label,
+.form-styling input {
+    display: block;
+    outline: none;
+    border-radius: 30px;
+    border: none;
+}
+
+/** Main Form Input Box Styling (Normal) **/
+.form-styling input[type="text"],
+.form-styling input[type="number"] {
+    color: #000;
+    font-size: 16px;
+    padding: 10px 18px;
+    margin: 10px 0;
+    transition: all 0.5s ease;
+}
+
+/** Main Form Input Box Styling (Writing) **/
+.form-styling input:focus {
+    background: #252525;
+    color: #fff;
+}
+
+/** Display Results Styling **/
+.record-display {
+    color: var(--color-text);
+    background: var(--bg);
+    position: relative;
+}
+
+/** Alert Messages **/
+.message {
+    text-align: center;
+    display: block;
+    width: 50%;
+    margin: 10px auto;
+    font-size: 14px;
+    color: var(--color-text);
+    border-radius: 5px;
+    padding: 10px 0;
+    visibility: hidden;
+}
+
+/** Alert Types **/
+.error {
+    background: #DE4957;
+    visibility: visible;
+}
+
+.success {
+    background: #28A745;
+    visibility: visible !important;
+}
+
+/** Section Buttons Centered **/
+.input-btns {
+    text-align: center;
+}
+
+/** Section Buttons Styling **/
+.input-btns button,
+.record-display button {
+    display: block;
+    width: 160px;
+    margin: 10px auto;
+    font-size: 14px;
+    font-family: inherit;
+    padding: 10px;
+    border-radius: 30px;
+    color: var(--color-buttons);
+    background: var(--color-headings);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    outline: none;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+    border: none;
+    opacity: 1;
+}
+
+/** Section Buttons Hover **/
+.input-btns button:hover {
+    opacity: 0.9;
+}
+
+/** Buttons Icon Spacing **/
+#submit-btn span,
+#cancel-btn span {
+    padding-right: 5px;
+}
+
+/** 'Reset' Button Position **/
+#reset-btn {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    width: 120px;
+}
+
+/** Display Results Content Position **/
+.record-display {
+    padding: 30px 65px;
+}
+
+/** Contacts Information **/
+.record-el {
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+}
+
+/** Labelling Styling **/
+#labelling {
+    font-weight: 600;
+}
+
+/** Each Contacts Container **/
+.record-item {
+    color: var(--color-text);
+    border-radius: 30px;
+    padding: 15px 25px;
+    margin: 15px 0;
+    background: var(--bg-panel);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+}
+
+/** Buttons Icon Spacing **/
+#delete-btn span {
+    padding-right: 5px;
+}
+
+/** -----[ Section Responsiveness ]----- **/
+
+/*@media screen and (min-width:992px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 90vw;
+        grid-column-gap: 30px;
+    }
+
+    .record-input {
+        height: 700px;
+    }
+
+    .record-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+}*/
