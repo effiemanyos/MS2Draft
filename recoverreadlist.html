@@ -260,6 +260,262 @@
     <!-- JavaScript File -->
     <script src="assets/js/toreadlist.js" type="text/javascript"></script>
 
+
+    <style>
+        /** Section Styling **/
+        #read-list-section {
+            background: var(--bg);
+            padding: 100px 20px 90px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /** Container Styling **/
+        #todo-container {
+            width: 1150px;
+            /* up to 10 books */
+            height: 820px;
+            margin: 70px 20px 0;
+            border-radius: 30px;
+            background: var(--bg-panel);
+            box-shadow: 0 4px 10px 0 rgba(36, 32, 32, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            padding-top: 50px;
+            font-size: 15px;
+        }
+
+        /** Projects Frame Styling **/
+        #projects {
+            /* up to 6 categories */
+            width: 90%;
+            /* up to 10 books */
+            height: 470px;
+            margin: 0px auto;
+            background: var(--bg-panel);
+        }
+
+        /** Order List Styling **/
+        ol {
+            margin-left: 15px;
+        }
+
+        /** Order List Items Styling **/
+        ol li {
+            border: 1px dotted #dddddd;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+
+        /** Order List Items Hover Over Effect **/
+        ol li:hover {
+            background: #eeeeee;
+            transform: scale(1.02);
+        }
+
+        /** 'Add New Category' CTA Button **/
+        #btnAddProject {
+            margin-left: 5.5%;
+            margin-bottom: 25px;
+            background: var(--color-headings);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            padding: 11px 17px 10px;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        /** 'Add New Category' CTA Button Hover Over Effect **/
+        #btnAddProject:hover {
+            background: var(--color-hover);
+        }
+
+        /** 'Add New Book' CTA Button **/
+        #btnAddTask {
+            margin-left: 5%;
+            margin-top: 25px;
+            background: var(--color-headings);
+            border: none;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            padding: 11px 17px 10px;
+            font-size: 13px;
+            color: #fff;
+        }
+
+        /** 'Add New Book' CTA Button Hover Over Effect **/
+        #btnAddTask:hover {
+            background: var(--color-hover);
+        }
+
+        /** ToReadList Categories Bar **/
+        .ui-widget-header {
+            background: var(--color-headings) !important;
+            border: none !important;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            height: 48px;
+        }
+
+        /** Main Categories Tabs **/
+        .ui-tabs-tab {
+            border-radius: 30px !important;
+            border: none !important;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        /** Category Tabs Close (X) Symbol **/
+        .ui-icon-close {
+            transform: scale(1.2) !important;
+            margin: 10px 15px 0 0 !important;
+            cursor: pointer !important;
+        }
+
+        /** All Internal CTA Buttons (Popups) **/
+        .ui-dialog-buttonpane button {
+            /* Fix all these !important messages */
+            font-size: 13px !important;
+            color: #fff !important;
+            background: var(--color-headings) !important;
+            border: none !important;
+            border-radius: 30px !important;
+            padding: 11px 17px 10px !important;
+            font-family: Poppins !important;
+            justify-content: center !important;
+            align-items: center !important;
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+        }
+
+        /** All Internal CTA Buttons (Pop-Ups) Hover Over Effect **/
+        .ui-dialog-buttonpane button:hover {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            background: var(--color-hover) !important;
+        }
+
+        /** Category Name + Input Section **/
+        #project-dialog {
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+
+        /** Book Name + Input Section **/
+        #task-dialog {
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+
+        /** Popup 'Add New Book' & 'Add New Category' Titles **/
+        .ui-dialog-title {
+            color: #fff;
+            font-weight: 400;
+            font-size: 19px;
+        }
+
+        /** Popup 'Category Name' Label */
+        .replace-this-name {
+            margin-right: 10px;
+            font-size: 15px;
+        }
+
+        /** Popup 'Category Name' Input Box **/
+        #new-project {
+            border-radius: 30px;
+            /* up to 5 categories */
+            width: 130px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        /** Popup 'Book Name' Input Box **/
+        #new-task {
+            border-radius: 30px;
+            width: 250px;
+            height: 20px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        /** Close (X) Popup Symbol = We Have Cancel **/
+        .ui-dialog-titlebar-close {
+            display: none !important;
+        }
+
+        /** Popup Main Container Styling **/
+        .ui-dialog {
+            box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.08);
+            border-bottom-left-radius: 20px !important;
+            border-bottom-right-radius: 20px !important;
+        }
+
+        /** Popup Bottom Section Styling **/
+        .ui-dialog-buttonpane {
+            border-top: 1px dotted #dddddd !important;
+            padding-top: 12px !important;
+            border-bottom-left-radius: 20px !important;
+            border-bottom-right-radius: 20px !important;
+        }
+
+        /** List Items | Edit & Remove Icons **/
+        .tasks-edit,
+        .tasks-delete {
+            border: none;
+            outline: none;
+            background: none;
+            margin-right: 7px;
+            float: right;
+            color: #4B76E5;
+        }
+
+        /** Edit Icon (Pencil) Hover Over Colour **/
+        .tasks-edit:hover {
+            color: #3CBED0;
+        }
+
+        /** Remove Icon (Trash) Hover Over Colour **/
+        .tasks-delete:hover {
+            color: #A90710;
+        }
+
+        /** Book Icon Colour **/
+        .book-icon {
+            color: #4B76E5;
+        }
+
+        /** Book Icon Hover Over Colour **/
+        .book-icon:hover {
+            color: #3CBED0;
+        }
+
+        /** List Items (Book Names) Before & After Space (Sides) **/
+        .task-text {
+            margin-left: 4px;
+            margin-right: 20px;
+        }
+
+        /** Book Icon Before & After Space (Sides) **/
+        .book-icon {
+            margin-left: 5px;
+            margin-right: 8px;
+        }
+
+        /** JS Checked Item Effect **/
+        .checked {
+            text-decoration: line-through;
+            color: #B2B2B2;
+        }
+
+        /** -----[ Section Responsiveness ]----- **/
+
+        @media (max-width:550px) {
+            .toread-intro-styling h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+
+
 </body>
 
 </html>
